@@ -21,4 +21,10 @@ get '/play' do
   erb(:play)
 end
 
+get '/attack' do
+  @player_1_name = session[:player_1_name]
+  @player_2_name = session[:player_2_name]
+  erb(:p1_attack)
+end
+
 end

@@ -4,4 +4,9 @@ feature 'Attacking mechanics' do
     click_button("Attack!")
     expect(page).to have_content 'Kai has attacked Ibrahim'
   end
+  scenario 'Attacking decrements HP by 10' do
+    sign_in_and_play
+    click_button("Attack!")
+    expect { $game.attack($player2) }.to change{ $player2.hitpoints }.by(-10)
+  end
 end

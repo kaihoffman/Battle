@@ -4,3 +4,7 @@ def sign_in_and_play
   fill_in :player_2_name, with: 'Ibrahim'
   click_button 'Submit'
 end
+
+def p1_attack
+  click_button 'Attack'
+end

@@ -21,17 +21,13 @@ post '/names' do
 end
 
 get '/play' do
-  @player_1_name = $game.player1.name
-  @player_2_name = $game.player2.name
-  @player_1_hitpoints = $game.player1.hitpoints
-  @player_2_hitpoints = $game.player2.hitpoints
+  @game = $game
   erb(:play)
 end
 
 get '/attack' do
-  @player_1 = $game.player1
-  @player_2 = $game.player2
-  $game.attack($game.player2)
+  @game = $game
+  @game.attack(@game.player2)
   erb(:p1_attack)
 end
 

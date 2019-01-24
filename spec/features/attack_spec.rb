@@ -7,6 +7,6 @@ feature 'Attacking mechanics' do
   scenario 'Attacking decrements HP by 10' do
     sign_in_and_play
     click_button("Attack!")
-    expect { $game.attack($player2) }.to change{ $player2.hitpoints }.by(-10)
+    expect { $game.attack($game.player2) }.to change{ $game.player2.hitpoints }.by(-10)
   end
 end

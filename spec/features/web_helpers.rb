@@ -7,4 +7,5 @@ end
 
 def p1_attack
   click_button 'Attack'
+  click_button 'Continue'
 end

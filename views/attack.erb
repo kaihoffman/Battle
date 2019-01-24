@@ -1,7 +1,7 @@
-<p><%= @game.player1.name %> has attacked <%= @game.player2.name %></p>
+<p><%= @game.play_order.first.name %> has attacked <%= @game.play_order.last.name %></p>
 
-<p><%= @game.player2.name %>: <%= @game.player2.hitpoints %> HP</p>
+<p><%= @game.play_order.last.name %>: <%= @game.play_order.last.hitpoints %> HP</p>
 
-<form action="/play" method="get">
+<form action="/change" method="get">
 <input type="submit" value="Continue BATTLE!">
 </form>
